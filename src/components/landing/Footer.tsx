@@ -31,7 +31,7 @@ const trustItems = [
 ];
 
 const legalLinks = [
-  { label: "Política de privacidad", href: "#" },
+  { label: "Política de privacidad", href: "https://novaone.io/privacy-policy/" },
   { label: "Términos y condiciones", href: "#" },
   { label: "Cookies", href: "#" },
 ];
