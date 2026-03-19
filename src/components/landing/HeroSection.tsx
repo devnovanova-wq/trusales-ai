@@ -29,8 +29,8 @@ const HeroSection = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold text-foreground leading-[1.06] tracking-tight mb-4 md:mb-6">
-            Tru Sales revela<br />
-            <span className="text-gradient-hero">quién vende, con IA.</span>
+            Evita que tu Equipo<br />
+            <span className="text-gradient-hero">pierda leads, con IA.</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
