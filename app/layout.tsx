@@ -37,6 +37,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} ${inter.variable} ${spaceGrotesk.variable}`}>
         
+        {/* Microsoft Clarity */}
+        <Script
+  id="clarity"
+  strategy="beforeInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "vyb43zto4t");
+    `,
+  }}
+/>
+        
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
@@ -53,21 +68,7 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-
-        {/* Microsoft Clarity */}
-        <Script
-  id="clarity"
-  strategy="beforeInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "vyb43zto4t");
-    `,
-  }}
-/>
+        
 
         {/* Noscript fallback */}
         <noscript>
