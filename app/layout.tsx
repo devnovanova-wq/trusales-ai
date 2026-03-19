@@ -1,6 +1,10 @@
 import { DM_Sans, Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 
+import "./globals.css";
+import { ReactNode } from "react";
+import Providers from "@/components/Providers";
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400","500","600","700","800"],
@@ -18,10 +22,6 @@ const spaceGrotesk = Space_Grotesk({
   weight: ["400","500","600","700"],
   variable: "--font-space",
 });
-
-import "./globals.css";
-import { ReactNode } from "react";
-import Providers from "@/components/Providers";
 
 export const metadata = {
   title: "Tru Sales",
@@ -52,15 +52,15 @@ export default function RootLayout({
             fbq('init', '924752757151274');
             fbq('track', 'PageView');
           `}
-        </Script>,
-import Script from "next/script";
+        </Script>
 
-<Script
-  src="https://www.clarity.ms/tag/vyb43zto4t"
-  strategy="afterInteractive"
-/>
+        {/* Microsoft Clarity */}
+        <Script
+          src="https://www.clarity.ms/tag/vyb43zto4t"
+          strategy="afterInteractive"
+        />
 
-        {/* Noscript fallback (Meta) */}
+        {/* Noscript fallback */}
         <noscript>
           <img
             height="1"
