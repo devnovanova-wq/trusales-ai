@@ -40,7 +40,7 @@ const HeroSection = () => {
 
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm md:text-lg text-foreground/60 mb-8 md:mb-10 leading-relaxed max-w-lg">
-            Tru Sales se conecta a tu CRM para organizar el trabajo de tu equipo comercial con IA, analizar el rendimiento de cada comercial y evitar que oportunidades valiosas se pierdan.
+            Tru Sales se conecta a tu CRM y controla automáticamente el seguimiento de cada lead.<br/> Cada comercial sabe cuándo responder. <br/> Ninguna oportunidad se vuelve a escapar.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="flex flex-wrap gap-4">
