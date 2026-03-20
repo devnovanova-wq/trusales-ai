@@ -27,12 +27,19 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold text-foreground leading-[1.06] tracking-tight mb-4 md:mb-6">
-            Tu Equipo pierde leads<br />
-            <span className="text-gradient-hero">aunque "usen" CRM</span>
-          </motion.h1>
-
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.1 }}
+  className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold text-foreground leading-[1.06] tracking-tight mb-4 md:mb-6"
+>
+  <span className="whitespace-nowrap">
+    Tu equipo pierde leads
+  </span>
+  <br />
+  <span className="text-gradient-hero">
+    aunque use CRM
+  </span>
+</motion.h1>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl lg:text-2xl font-semibold text-foreground/80 mb-4 md:mb-5">
             El mejor amigo del <span className="text-gradient-hero">Director Comercial</span>.
