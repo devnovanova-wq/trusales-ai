@@ -29,8 +29,8 @@ const HeroSection = () => {
           <motion.h1
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold text-foreground leading-[1.06] tracking-tight mb-4 md:mb-6">
-            Evita que tu Equipo<br />
-            <span className="text-gradient-hero">pierda leads, con IA.</span>
+            Tu Equipo pierde leads<br />
+            <span className="text-gradient-hero">aunque "usen" CRM</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
@@ -40,7 +40,7 @@ const HeroSection = () => {
 
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
             className="text-sm md:text-lg text-foreground/60 mb-8 md:mb-10 leading-relaxed max-w-lg">
-            Tru Sales se conecta a tu CRM y controla automáticamente el seguimiento de cada lead.<br/> Cada comercial sabe cuándo responder. <br/> Ninguna oportunidad se vuelve a escapar.
+            Tru Sales se conecta a tu CRM y detecta oportunidades antes de que las pierdas.<br/> Cada comercial sabe cuándo responder. <br/> Ninguna oportunidad se vuelve a escapar.
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="flex flex-wrap gap-4">
