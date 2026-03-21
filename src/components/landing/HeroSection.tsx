@@ -2,17 +2,31 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import AnalyticsBackground from "./AnalyticsBackground";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center">
-      
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(210,60%,95%)] via-[hsl(215,55%,91%)] to-[hsl(220,50%,88%)]" />
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
 
-      <div className="container mx-auto px-4 py-24 relative z-10">
-        <div className="max-w-2xl">
+      {/* Background móvil ligero */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(210,60%,95%)] via-[hsl(215,55%,91%)] to-[hsl(220,50%,88%)] md:hidden" />
 
-          <div className="mb-8">
+      {/* Background SaaS visual SOLO desktop */}
+      <div className="hidden md:block">
+        <AnalyticsBackground />
+      </div>
+
+      <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
+        <div className="max-w-xl">
+
+          {/* Logo */}
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
             <Image
               src="/assets/trusales-logo-hero.webp"
               alt="Tru Sales"
@@ -20,34 +34,82 @@ const HeroSection = () => {
               height={48}
               priority
             />
-          </div>
+          </motion.div>
 
-          <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.06] mb-6">
-            <span className="whitespace-nowrap">Tu equipo pierde leads</span>
+          {/* Headline */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[3.8rem] font-bold leading-[1.05] mb-6 tracking-tight"
+          >
+            <span className="whitespace-nowrap">
+              Tu equipo pierde leads
+            </span>
             <br />
-            <span className="text-gradient-hero">aunque use CRM</span>
-          </h1>
+            <span className="text-gradient-hero">
+              aunque use CRM
+            </span>
+          </motion.h1>
 
-          <p className="text-lg md:text-xl font-semibold mb-4">
+          {/* Subheadline */}
+          <motion.p 
+            initial={{ opacity: 0, y: 15 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl font-semibold text-foreground/80 mb-4"
+          >
             Convierte oportunidades en ventas consistentes.
-          </p>
+          </motion.p>
 
-          <p className="text-base text-foreground/70 mb-8 max-w-lg">
-            Detecta en tiempo real qué leads no están siendo atendidos y actúa antes de perderlos.
-          </p>
+          {/* Descripción */}
+          <motion.p 
+            initial={{ opacity: 0, y: 15 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base md:text-lg text-foreground/60 mb-8 leading-relaxed"
+          >
+            Detecta en tiempo real qué leads no están siendo atendidos 
+            y actúa antes de perderlos.
+          </motion.p>
 
-          <div className="flex flex-wrap gap-4">
+          {/* Botones */}
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap gap-4"
+          >
             <a href="#pricing">
-              <Button variant="cta" size="lg">
+              <Button 
+                variant="cta" 
+                size="lg"
+                className="rounded-full px-8 py-6 text-base shadow-lg hover:scale-105 transition"
+              >
                 Reservar Instalación (1€)
               </Button>
             </a>
+
             <a href="#video">
-              <Button variant="ctaOutline" size="lg">
+              <Button 
+                variant="ctaOutline" 
+                size="lg"
+                className="rounded-full px-8 py-6 text-base hover:bg-primary/10 transition"
+              >
                 Agendar DEMO
               </Button>
             </a>
-          </div>
+          </motion.div>
+
+          {/* Trust / microcopy */}
+          <motion.p 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-6 text-xs text-foreground/50"
+          >
+            Instalación en 48h · Sin compromiso · Compatible con tu CRM
+          </motion.p>
 
         </div>
       </div>
