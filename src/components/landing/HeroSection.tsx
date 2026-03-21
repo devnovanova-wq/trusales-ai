@@ -54,9 +54,9 @@ const HeroSection = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl font-semibold text-foreground/80 mb-4">
-  <span className="relative inline-block">
-    Convierte oportunidades en ventas consistentes.
-    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-blue-400 to-cyan-400 opacity-40"></span>
+  Convierte oportunidades en{" "}
+  <span className="text-gradient-hero">
+    ventas consistentes
   </span>
 </p>
 
