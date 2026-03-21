@@ -9,18 +9,21 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400","500","600","700","800"],
   variable: "--font-dm-sans",
+  display: "swap"
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400","500","600"],
   variable: "--font-inter",
+  display: "swap"
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400","500","600","700"],
   variable: "--font-space",
+  display: "swap"
 });
 
 export const metadata = {
