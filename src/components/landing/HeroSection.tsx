@@ -42,7 +42,7 @@ const HeroSection = () => {
 </motion.h1>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl lg:text-2xl font-semibold text-foreground/80 mb-4 md:mb-5">
-            Convierte oportunidades <span className="text-gradient-hero">en Ventas Consistentes</span>.
+            Convierte oportunidades <span className="text-gradient-hero">en ventas consistentes</span>.
           </motion.p>
 
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
