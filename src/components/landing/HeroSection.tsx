@@ -68,8 +68,7 @@ const HeroSection = () => {
             className="text-base md:text-lg text-foreground/60 mb-8 leading-relaxed"
           >
             Tru Sales detecta en tiempo real qué leads no están siendo atendidos 
-            y actúa antes de perderlos. <br/>
-            Automatiza el seguimiento de tu equipo de ventas.
+            y actúa antes de perderlos.
           </motion.p>
 
           {/* Botones */}
