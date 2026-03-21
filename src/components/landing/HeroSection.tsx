@@ -53,11 +53,12 @@ const HeroSection = () => {
           </motion.h1>
 
           {/* Subheadline */}
-          <div className="inline-block bg-white/40 backdrop-blur-sm px-4 py-2 rounded-lg mb-4">
-  <p className="text-lg md:text-xl font-semibold text-foreground/90">
+          <p className="text-lg md:text-xl font-semibold text-foreground/80 mb-4">
+  <span className="relative inline-block">
     Convierte oportunidades en ventas consistentes.
-  </p>
-</div>
+    <span className="absolute left-0 bottom-0 w-full h-[2px] bg-gradient-to-r from-blue-400 to-cyan-400 opacity-40"></span>
+  </span>
+</p>
 
           {/* Descripción */}
           <motion.p 
