@@ -53,8 +53,8 @@ const HeroSection = () => {
           </motion.h1>
 
           {/* Subheadline */}
-          <div className="border-l-2 border-primary/30 pl-4 mb-4">
-  <p className="text-lg md:text-xl font-semibold text-foreground/80">
+          <div className="inline-block bg-white/40 backdrop-blur-sm px-4 py-2 rounded-lg mb-4">
+  <p className="text-lg md:text-xl font-semibold text-foreground/90">
     Convierte oportunidades en ventas consistentes.
   </p>
 </div>
