@@ -53,14 +53,11 @@ const HeroSection = () => {
           </motion.h1>
 
           {/* Subheadline */}
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl font-semibold text-foreground/80 mb-4"
-          >
-            Convierte oportunidades en ventas consistentes.
-          </motion.p>
+          <div className="border-l-2 border-primary/30 pl-4 mb-4">
+  <p className="text-lg md:text-xl font-semibold text-foreground/80">
+    Convierte oportunidades en ventas consistentes.
+  </p>
+</div>
 
           {/* Descripción */}
           <motion.p 
