@@ -42,7 +42,7 @@ const HeroSection = () => {
 </motion.h1>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl lg:text-2xl font-semibold text-foreground/80 mb-4 md:mb-5">
-            El mejor amigo del <span className="text-gradient-hero">Director Comercial</span>.
+            Convierte leads <span className="text-gradient-hero">en ventas consistentes</span>.
           </motion.p>
 
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
@@ -53,12 +53,12 @@ const HeroSection = () => {
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="flex flex-wrap gap-4">
             <a href="#pricing">
               <Button variant="cta" size="lg" className="rounded-full px-8 py-6 text-base gap-2">
-                Conectar mi CRM <ArrowRight size={18} />
+                Reservar Instalación (1€) <ArrowRight size={18} />
               </Button>
             </a>
             <a href="#video">
               <Button variant="ctaOutline" size="lg" className="rounded-full px-8 py-6 text-base">
-                Quiero Verlo
+                Agendar DEMO
               </Button>
             </a>
           </motion.div>
