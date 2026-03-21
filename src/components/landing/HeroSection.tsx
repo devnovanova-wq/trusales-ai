@@ -14,7 +14,7 @@ const HeroSection = () => {
 
           <div className="mb-8">
             <Image
-              src="/assets/trusales-logo-hero.png"
+              src="/assets/trusales-logo-hero.webp"
               alt="Tru Sales"
               width={120}
               height={48}
