@@ -13,6 +13,7 @@ import CTASection from "@/components/landing/CTASection";
 import FAQSection from "@/components/landing/FAQSection";
 import Footer from "@/components/landing/Footer";
 import PopupDemo from "@/components/landing/PopupDemo";
+import WhatsAppButton from "@/components/landing/WhatsAppButton";
 
 export default function Page() {
   return (
@@ -32,6 +33,7 @@ export default function Page() {
       <CTASection />
       <Footer />
       <PopupDemo />
+      <WhatsAppButton />
     </div>
   );
 }
