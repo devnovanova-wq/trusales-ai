@@ -12,6 +12,7 @@ import AudienceSection from "@/components/landing/AudienceSection";
 import CTASection from "@/components/landing/CTASection";
 import FAQSection from "@/components/landing/FAQSection";
 import Footer from "@/components/landing/Footer";
+import PopupDemo from "@/components/landing/PopupDemo";
 
 export default function Page() {
   return (
@@ -30,6 +31,7 @@ export default function Page() {
       <FAQSection />
       <CTASection />
       <Footer />
+      <PopupDemo />
     </div>
   );
 }
