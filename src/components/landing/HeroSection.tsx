@@ -1,68 +1,118 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import AnalyticsBackground from "./AnalyticsBackground";
 
-/* ─── HeroSection ─── */
 const HeroSection = () => {
-
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden flex items-center">
-      {/* ── Mobile gradient background ── */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(210,60%,95%)] via-[hsl(215,55%,91%)] to-[hsl(220,50%,88%)] md:hidden" />
-      {/* ── Analytics-style product background (desktop only) ── */}
-      <AnalyticsBackground />
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
 
-      {/* ── Content ── */}
+      {/* Background móvil ligero */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[hsl(210,60%,95%)] via-[hsl(215,55%,91%)] to-[hsl(220,50%,88%)] md:hidden" />
+
+      {/* Background SaaS visual SOLO desktop */}
+      <div className="hidden md:block">
+        <AnalyticsBackground />
+      </div>
+
       <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-        <div className="max-w-2xl">
-          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-8">
-            <img
-  src="/assets/trusales-logo-hero.png"
-  alt="Tru Sales"
-  className="h-12 w-auto"
-/>
+        <div className="max-w-xl">
+
+          {/* Logo */}
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+            <Image
+              src="/assets/trusales-logo-hero.webp"
+              alt="Tru Sales"
+              width={120}
+              height={48}
+              priority
+            />
           </motion.div>
 
+          {/* Headline */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold text-foreground leading-[1.06] tracking-tight mb-4 md:mb-6">
-            Tru Sales revela<br />
-            <span className="text-gradient-hero">quién vende, con IA.</span>
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="font-display text-3xl md:text-5xl lg:text-6xl xl:text-[3.8rem] font-bold leading-[1.05] mb-6 tracking-tight"
+          >
+            <span className="whitespace-nowrap">
+              Tu equipo pierde leads
+            </span>
+            <br />
+            <span className="text-gradient-hero">
+              aunque use CRM
+            </span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl lg:text-2xl font-semibold text-foreground/80 mb-4 md:mb-5">
-            El mejor amigo del <span className="text-gradient-hero">Director Comercial</span>.
+          {/* Subheadline */}
+          <p className="text-lg md:text-xl font-semibold text-foreground/80 mb-4">
+  Convierte oportunidades en{" "}
+  <span className="text-gradient-hero">
+    ventas consistentes
+  </span>
+</p>
+
+          {/* Descripción */}
+          <motion.p 
+            initial={{ opacity: 0, y: 15 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base md:text-lg text-foreground/60 mb-8 leading-relaxed"
+          >
+            Tru Sales detecta en tiempo real qué leads no están siendo atendidos 
+            y actúa antes de perderlos.
           </motion.p>
 
-          <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm md:text-lg text-foreground/60 mb-8 md:mb-10 leading-relaxed max-w-lg">
-            Tru Sales se conecta a tu CRM para organizar el trabajo de tu equipo comercial con IA, analizar el rendimiento de cada comercial y evitar que oportunidades valiosas se pierdan.
-          </motion.p>
-
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="flex flex-wrap gap-4">
+          {/* Botones */}
+          <motion.div 
+            initial={{ opacity: 0, y: 15 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap gap-4"
+          >
             <a href="#pricing">
-              <Button variant="cta" size="lg" className="rounded-full px-8 py-6 text-base gap-2">
-                Conectar mi CRM <ArrowRight size={18} />
+              <Button 
+                variant="cta" 
+                size="lg"
+                className="rounded-full px-8 py-6 text-base shadow-lg hover:scale-105 transition"
+              >
+                Reservar Instalación (1€)
               </Button>
             </a>
+
             <a href="#video">
-              <Button variant="ctaOutline" size="lg" className="rounded-full px-8 py-6 text-base">
-                Quiero Verlo
+              <Button 
+                variant="ctaOutline" 
+                size="lg"
+                className="rounded-full px-8 py-6 text-base hover:bg-primary/10 transition"
+              >
+                Agendar DEMO
               </Button>
             </a>
           </motion.div>
 
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.6 }} className="mt-12 text-xs text-foreground/30 tracking-widest uppercase">
-            Compatible con tu CRM y Equipo de Ventas - Sea cual sea
+          {/* Trust / microcopy */}
+          <motion.p 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-6 text-xs text-foreground/50"
+          >
+            Instalación en 48h · Sin compromiso · Compatible con tu CRM
           </motion.p>
+
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default HeroSection;
