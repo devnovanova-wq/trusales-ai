@@ -7,11 +7,13 @@ const PopupDemo = () => {
 
   useEffect(() => {
     const lastSeen = localStorage.getItem("popup_seen");
+    const sessionSeen = sessionStorage.getItem("popup_seen_session");
 
-    // ⏱️ 24 horas = 86400000 ms
-    if (lastSeen && Date.now() - parseInt(lastSeen) < 86400000) {
-      return;
-    }
+    // ❌ Si ya se vio en esta sesión → NO mostrar
+    if (sessionSeen) return;
+
+    // ❌ Si se vio en últimas 24h → NO mostrar
+    if (lastSeen && Date.now() - parseInt(lastSeen) < 86400000) return;
 
     const isMobile = window.innerWidth < 768;
 
@@ -20,16 +22,21 @@ const PopupDemo = () => {
       const timer = setTimeout(() => {
         setShow(true);
         localStorage.setItem("popup_seen", Date.now().toString());
+        sessionStorage.setItem("popup_seen_session", "true");
       }, 15000);
 
       return () => clearTimeout(timer);
     }
 
-    // 💻 DESKTOP → exit intent
+    // 💻 DESKTOP → exit intent (SOLO UNA VEZ)
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
         setShow(true);
+
         localStorage.setItem("popup_seen", Date.now().toString());
+        sessionStorage.setItem("popup_seen_session", "true");
+
+        document.removeEventListener("mouseout", handleMouseLeave);
       }
     };
 
@@ -46,7 +53,7 @@ const PopupDemo = () => {
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
       <div className="bg-white rounded-xl p-6 max-w-md w-full mx-4 shadow-xl relative">
 
-        {/* Close */}
+        {/* ❌ Close */}
         <button
           onClick={() => setShow(false)}
           className="absolute top-3 right-3 text-gray-400 hover:text-black"
@@ -67,10 +74,14 @@ const PopupDemo = () => {
           Te lo enseño en directo. Sin compromiso.
         </p>
 
-        {/* CTA */}
+        {/* 🚀 CTA */}
         <a
-          href="#video"
-          className="block text-center bg-black text-white rounded-lg py-3 font-semibold hover:opacity-90 transition"
+          href="https://calendly.com/novau-info/demo-tru-sales"
+          target="_blank"
+          onClick={() => {
+            setShow(false);
+          }}
+          className="block text-center bg-gradient-to-r from-[#00d4d4] to-[#0066ff] text-white rounded-lg py-3 font-semibold hover:opacity-90 transition"
         >
           Agendar demo
         </a>
