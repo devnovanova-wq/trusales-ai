@@ -23,7 +23,7 @@ const PopupDemo = () => {
         setShow(true);
         localStorage.setItem("popup_seen", Date.now().toString());
         sessionStorage.setItem("popup_seen_session", "true");
-      }, 15000);
+      }, 4000);
 
       return () => clearTimeout(timer);
     }
@@ -63,15 +63,15 @@ const PopupDemo = () => {
 
         {/* Content */}
         <h3 className="text-xl font-bold mb-3">
-          Antes de irte...
+          ¿Quieres ver como funciona?
         </h3>
 
         <p className="text-gray-600 mb-4">
-          ¿Quieres ver en 10 minutos cuántos leads estás perdiendo ahora mismo?
+          Te lo enseñamos en 15 minutos. Reserva Ahora.
         </p>
 
         <p className="text-sm text-gray-500 mb-6">
-          Te lo enseño en directo. Sin compromiso.
+          Mostramos en directo. Sin Compromisos.
         </p>
 
         {/* 🚀 CTA */}
@@ -83,7 +83,7 @@ const PopupDemo = () => {
           }}
           className="block text-center bg-gradient-to-r from-[#00d4d4] to-[#0066ff] text-white rounded-lg py-3 font-semibold hover:opacity-90 transition"
         >
-          Agendar demo
+          Agendar DEMO
         </a>
 
       </div>
