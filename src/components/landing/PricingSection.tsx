@@ -21,7 +21,7 @@ const plans = [
   subtitle: "Si utilizas:",
   title: "Otros CRM",
   originalPrice: "1.200€",
-  finalPrice: "300€",
+  finalPrice: "1€",
   suscripcion: "10€ / comercial / mes",
   highlight: false
 }];
