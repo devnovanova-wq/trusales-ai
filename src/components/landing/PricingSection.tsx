@@ -13,7 +13,7 @@ const plans = [
   subtitle: "Si tu CRM es:",
   title: "Pipedrive / HubSpot",
   originalPrice: "600€",
-  finalPrice: "150€",
+  finalPrice: "1€",
   suscripcion: "5€ / comercial / mes",
   highlight: true
 },
@@ -122,11 +122,11 @@ const PricingSection = () => {
                 </p>
                 <div className="inline-flex items-center gap-2 mt-1 mb-2">
                   <span className="gradient-hero text-primary-foreground text-xs font-bold px-2.5 py-0.5 rounded-full">
-                    −75%
+                    −99%
                   </span>
                   <span className="text-xs text-muted-foreground font-medium uppercase tracking-wide">DESCUENTO ACTIVACIÓN</span>
                 </div>
-                <p className="text-sm text-muted-foreground mt-1">Pagas una vez instalado:</p>
+                <p className="text-sm text-muted-foreground mt-1">Instala hoy por tan solo:</p>
                 <p className="text-3xl font-display font-black text-foreground">
                   {plan.finalPrice}
                 </p>
@@ -144,11 +144,6 @@ const PricingSection = () => {
                   para asegurar tu activación.
                 </p>
               </div>
-
-              {/* Payment flow explanation */}
-              <p className="text-xs text-muted-foreground mb-3">
-                El resto se paga tras la sesión de activación.
-              </p>
 
               {/* Micro-trust indicators */}
               <div className="flex flex-wrap items-center gap-3 mb-4">
