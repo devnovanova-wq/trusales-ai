@@ -88,7 +88,7 @@ const ActivationAvailability = () => {
 
         {/* Subtitle */}
         <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-foreground mb-8 relative z-10">
-          <span className="text-gradient-hero">−75%</span> en la instalación de Tru Sales
+          <span className="text-gradient-hero">−99%</span> en la instalación de Tru Sales
         </h3>
 
         {/* Countdown label */}
