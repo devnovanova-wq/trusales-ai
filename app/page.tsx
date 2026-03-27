@@ -37,3 +37,8 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata = {
+  title: "Cómo funciona Tru Sales",
+  description: "Descubre cómo Tru Sales detecta leads perdidos en tu CRM y mejora el rendimiento de tu equipo comercial.",
+};

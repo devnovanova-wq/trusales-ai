@@ -27,8 +27,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Tru Sales",
-  description: "Nunca vuelvas a perder un Lead",
+  title: {
+    default: "Tru Sales",
+    template: "%s | Tru Sales",
+  },
+  description:
+    "El software que detecta leads olvidados en tu CRM y te ayuda a recuperar ventas en tiempo real.",
 };
 
 export default function RootLayout({
