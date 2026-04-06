@@ -1,6 +1,6 @@
 import { DM_Sans, Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
-
+import ScrollToPricing from "@/components/ScrollToPricing";
 import "./globals.css";
 import { ReactNode } from "react";
 import Providers from "@/components/Providers";
@@ -41,24 +41,26 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${dmSans.variable} ${inter.variable} ${spaceGrotesk.variable}`}>
-        
+
+        <ScrollToPricing />
+
         {/* Microsoft Clarity */}
         <Script
-  id="ms-clarity"  
-  strategy="beforeInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "vyb43zto4t");
-    `,
-  }}
-/>
-        
+          id="ms-clarity"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+              })(window, document, "clarity", "script", "vyb43zto4t");
+            `,
+          }}
+        />
+
         {/* Meta Pixel */}
         <Script id="facebook-pixel" strategy="afterInteractive">
           {`
@@ -75,7 +77,6 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-        
 
         {/* Noscript fallback */}
         <noscript>
